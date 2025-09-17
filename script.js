@@ -12,17 +12,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// "Stol Bron Qilish" tugmasi kontakt formasi joyiga olib boradi
+document.getElementById('reserveBtn').addEventListener('click', function() {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+        window.scrollTo({
+            top: contactSection.offsetTop - 80,
+            behavior: 'smooth'
+        });
+    }
+});
+
 // Form Submission
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     alert('Xabaringiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog‘lanamiz.');
     this.reset();
 });
-
-// Hero Button Animation
-document.getElementById('reserveBtn').addEventListener('click', function() {
-    alert("Stol bron qilish uchun +998 (90) 123-45-67 raqamiga qo'ng'iroq qiling!");
-});
-
-// Mobile Menu Toggle (optional enhancement)
-// You can add hamburger menu later if needed
