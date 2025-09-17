@@ -147,14 +147,16 @@ nav .nav-links a:hover::after {
 }
 
 .menu-item img {
-    width: 80px;
-    height: 80px;
+    width: 100px;        /* Rasm kichiklashtirildi */
+    height: 100px;
+    object-fit: cover;   /* Rasm proporsiyasi saqlanadi */
+    border-radius: 10px;
     margin-bottom: 1rem;
     transition: transform 0.3s;
 }
 
 .menu-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .menu-item h3 {
@@ -167,6 +169,7 @@ nav .nav-links a:hover::after {
     color: #666;
     margin-bottom: 1rem;
     min-height: 60px;
+    font-size: 1rem;     /* Matn kichiklashtirildi */
 }
 
 .price {
@@ -305,6 +308,11 @@ footer {
         font-size: 1.1rem;
     }
 
+    #reserveBtn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
     .contact-wrapper {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -313,6 +321,14 @@ footer {
     .menu-items {
         grid-template-columns: 1fr;
     }
+
+    .menu-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .menu-item p {
+        font-size: 0.95rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -320,8 +336,21 @@ footer {
         font-size: 1.8rem;
     }
 
-    #reserveBtn {
-        padding: 12px 30px;
+    .hero-content p {
         font-size: 1rem;
+    }
+
+    #reserveBtn {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+    }
+
+    .menu-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .menu-item h3 {
+        font-size: 1.2rem;
     }
 }
